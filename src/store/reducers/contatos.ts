@@ -35,6 +35,13 @@ const initialState: ContatoState = {
       categoria: enums.Categoria.OUTROS,
       numero: 5555555,
       nome: 'lojinha ficticia'
+    },
+    {
+      id: 5,
+      email: 'danillohenrique@gmail.com',
+      categoria: enums.Categoria.FAMILIA,
+      numero: 4545645646,
+      nome: 'Dannilo henrique de azevedo'
     }
   ]
 }
