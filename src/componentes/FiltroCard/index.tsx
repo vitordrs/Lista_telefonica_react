@@ -8,9 +8,10 @@ export type Props = {
   legenda: string
   criterio: 'categoria' | 'todos'
   valor?: enums.Categoria
+  className?: string
 }
 
-const FiltroCard = ({ legenda, criterio, valor }: Props) => {
+const FiltroCard = ({ legenda, criterio, valor, className }: Props) => {
   const dispatch = useDispatch()
   const { filtro, contatos } = useSelector((state: RootReducer) => state)
 
@@ -40,7 +41,7 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
   const contador = contarContatos()
   const ativo = verificaAtivo()
   return (
-    <S.Card ativo={ativo} onClick={filtrar}>
+    <S.Card className={className} ativo={ativo} onClick={filtrar}>
       <S.Contador>{contador}</S.Contador>
       <S.Label>{legenda}</S.Label>
     </S.Card>

@@ -11,6 +11,15 @@ export const Card = styled.div<Props>`
   color: ${(props) => (props.ativo ? '#5eddf3ff' : '#5e5e5e')};
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.todos {
+    grid-column: span 2;
+    justify-content: center;
+  }
 `
 export const Contador = styled.span`
   font-weight: bold;

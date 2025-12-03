@@ -16,44 +16,46 @@ const Lateral = ({ mostrarFiltros }: Props) => {
   const dispatch = useDispatch()
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
-  return(
+  return (
     <S.Aside>
       <div>
         {mostrarFiltros ? (
-        <>
-          <Campo
-          type='text'
-          placeholder='Buscar'
-          value={termo}
-          onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
-          />
-          <S.Filtros>
-            <FiltroCard
-              valor={enums.Categoria.AMIGOS}
-              criterio='categoria'
-              legenda='Amigos'
+          <>
+            <Campo
+              type="text"
+              placeholder="Buscar"
+              value={termo}
+              onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
             />
-            <FiltroCard
-              valor={enums.Categoria.FAMILIA}
-              criterio='categoria'
-              legenda='Familia'
-            />
-            <FiltroCard
-              valor={enums.Categoria.TRABALHO}
-              criterio='categoria'
-              legenda='Trabalho'
-            />
-            <FiltroCard
-              valor={enums.Categoria.OUTROS}
-              criterio='categoria'
-              legenda='Outros'
-            />
-            <FiltroCard criterio="todos" legenda="todos"
-          </S.Filtros>
-        </>
-      ) : (
-        <Botao type='button' onClick={() => navigate('/')}></Botao>
-      )}
+            <S.Filtros>
+              <FiltroCard
+                valor={enums.Categoria.AMIGOS}
+                criterio="categoria"
+                legenda="Amigos"
+              />
+              <FiltroCard
+                valor={enums.Categoria.FAMILIA}
+                criterio="categoria"
+                legenda="Familia"
+              />
+              <FiltroCard
+                valor={enums.Categoria.TRABALHO}
+                criterio="categoria"
+                legenda="Trabalho"
+              />
+              <FiltroCard
+                valor={enums.Categoria.OUTROS}
+                criterio="categoria"
+                legenda="Outros"
+              />
+              <FiltroCard criterio="todos" legenda="todos" className="todos" />
+            </S.Filtros>
+          </>
+        ) : (
+          <Botao type="button" onClick={() => navigate('/')}>
+            Voltar a pagina anterior
+          </Botao>
+        )}
       </div>
     </S.Aside>
   )
