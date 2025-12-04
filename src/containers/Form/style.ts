@@ -24,7 +24,7 @@ export const Opcoes = styled.div`
 export const Opcao = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px; /* espaço entre bolinha e texto */
+  gap: 10px;
 
   input[type='radio'] {
     width: 18px;
@@ -42,23 +42,15 @@ export const CampoEdicao = styled.input`
   padding: 14px;
   border-radius: 8px;
   font-size: 16px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #c7c7be;
   outline: none;
   transition: 0.2s;
-
-  &:focus {
-    border-color: #8a2be2;
-  }
 `
 
 export const Select = styled.select`
   padding: 14px;
   border-radius: 8px;
   font-size: 16px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #c7c7be;
   outline: none;
-
-  &:focus {
-    border-color: #8a2be2;
-  }
 `

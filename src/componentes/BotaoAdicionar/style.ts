@@ -4,12 +4,12 @@ import styled from 'styled-components'
 export const BotaoAdd = styled(Link)`
   height: 64px;
   width: 64px;
-  background-color: #14a3e6ff;
-  color: #fff;
+  background-color: #1d3c78;
+  color: #f7eed6;
   position: fixed;
   bottom: 40px;
   right: 40px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #fae2a0ff;
+  background-color: #fff9f2;
   height: 100vh;
 `
 

@@ -18,11 +18,13 @@ function corDeFundo(props: TagProps): string {
 }
 
 export const Card = styled.div`
-  background-color: #fcfcfc;
+  background-color: #faf6ecff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   margin-bottom: 32px;
   border-radius: 16px;
+  border-bottom: 3px dotted #c7c7be;
+  border-top: 6px double #c7c7be;
 
   label {
     display: flex;
@@ -45,20 +47,22 @@ export const Tag = styled.span<TagProps>`
   border-radius: 8px;
   margin-right: 16px;
   display: inline-block;
+  text-transform: capitalize;
 `
 
 export const BarraAcao = styled.div`
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding-top: 16px;
 `
 
 export const BotaoN = styled(Botao)`
-  background-color: red;
+  background-color: #8b1e1e;
+  border-radius: 10px;
 `
 export const LinhaInfo = styled.p`
   margin: 4px 0;
   font-size: 14px;
-  color: #333;
+  color: #1b1b1b;
+  border-bottom: 1px solid #c7c7be;
 
   strong {
     color: #000;
@@ -68,6 +72,6 @@ export const LinhaInfo = styled.p`
 export const EditContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Espaço entre inputs no modo edição */
+  gap: 10px;
   margin-bottom: 12px;
 `

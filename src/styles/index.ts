@@ -14,6 +14,7 @@ const estiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+  background-color: #f7eed6;
 `
 
 export const MainContainer = styled.main`
@@ -25,7 +26,7 @@ export const MainContainer = styled.main`
 export const Titulo = styled.h2`
   display: block;
   margin-top: 40px;
-  margin-bottom: 40;
+  margin-bottom: 20px;
   font-size: 18px;
   text-transform: capitalize;
 `
@@ -33,7 +34,7 @@ export const Titulo = styled.h2`
 export const Campo = styled.input`
   padding: 8px;
   background-color: #fff;
-  color: #000;
+  color: #1b1b1b;
   width: 100%;
 `
 
@@ -43,12 +44,13 @@ export const Botao = styled.button`
   color: #fff;
   padding: 8px 12px;
   cursor: pointer;
-  background-color: #666;
+  background-color: #005a8d;
   margin-right: 8px;
+  border-radius: 10px;
 `
 
 export const BotaoOk = styled(Botao)`
-  background-color: #172ad611;
+  background-color: #003a58;
 `
 
 export default estiloGlobal

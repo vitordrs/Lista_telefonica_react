@@ -13,7 +13,7 @@ const Formulario = () => {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [numero, setNumero] = useState(0)
-  const [categoria, setCategoria] = useState(enums.Categoria.FAMILIA)
+  const [categoria, setCategoria] = useState(enums.Categoria.OUTROS)
 
   const addContato = (evento: FormEvent) => {
     evento.preventDefault()
