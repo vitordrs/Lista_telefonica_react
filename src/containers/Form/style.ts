@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px; /* mais espaço entre os campos */
+  gap: 20px;
   margin-top: 24px;
   width: 100%;
   max-width: 480px;

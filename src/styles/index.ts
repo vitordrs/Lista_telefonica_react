@@ -18,9 +18,11 @@ export const Container = styled.div`
 `
 
 export const MainContainer = styled.main`
-  padding: 0 40px;
+  padding-left: 90px;
+  padding-right: 180px;
   height: 100vh;
   overflow-y: scroll;
+  text-transform: capitalize;
 `
 
 export const Titulo = styled.h2`

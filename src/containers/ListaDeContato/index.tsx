@@ -50,7 +50,7 @@ const ListaDeContatos = () => {
     }
 
     if (termoValido) {
-      return `🔍 ${quantidade} ${plural} contendo "${termo!.toString().trim()}"`
+      return `🔍 ${quantidade} ${plural} contendo "${termo?.toString().trim()}"`
     }
 
     return `📁 ${quantidade} ${plural} encontrado(s)`

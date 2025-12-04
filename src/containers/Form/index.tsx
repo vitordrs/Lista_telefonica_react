@@ -1,4 +1,4 @@
-import { FormEvent, useState, ChangeEvent } from 'react'
+import { FormEvent, useState } from 'react'
 import { BotaoOk, MainContainer, Titulo, Campo } from '../../styles'
 import { useNavigate } from 'react-router-dom'
 import { Form, Opcao, Opcoes } from './style'
@@ -12,8 +12,29 @@ const Formulario = () => {
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [numero, setNumero] = useState(0)
+  const [numero, setNumero] = useState('')
   const [categoria, setCategoria] = useState(enums.Categoria.OUTROS)
+
+  const formatarTelefone = (valor: string) => {
+    const digits = valor.replace(/\D/g, '')
+
+    if (digits.length <= 2) {
+      return `(${digits}`
+    }
+    if (digits.length <= 6) {
+      return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+    }
+    if (digits.length <= 10) {
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(
+        6,
+        10
+      )}`
+    }
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(
+      7,
+      11
+    )}`
+  }
 
   const addContato = (evento: FormEvent) => {
     evento.preventDefault()
@@ -22,7 +43,7 @@ const Formulario = () => {
       adicionar({
         nome,
         email,
-        numero,
+        numero: Number(numero.replace(/\D/g, '')),
         categoria
       })
     )
@@ -32,6 +53,7 @@ const Formulario = () => {
   return (
     <MainContainer>
       <Titulo>Novo Contato</Titulo>
+
       <Form onSubmit={addContato}>
         <Campo
           value={nome}
@@ -49,11 +71,9 @@ const Formulario = () => {
 
         <Campo
           value={numero}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setNumero(Number(e.target.value))
-          }
-          type="number"
-          placeholder="(00)9999-9999"
+          onChange={(e) => setNumero(formatarTelefone(e.target.value))}
+          placeholder="Telefone"
+          type="text"
         />
 
         <Opcoes>
