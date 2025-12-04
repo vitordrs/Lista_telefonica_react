@@ -10,7 +10,7 @@ const initialState: ContatoState = {
   itens: [
     {
       id: 1,
-      email: 'thayazd2110@gmail.com',
+      email: 'thais@gmail.com',
       categoria: enums.Categoria.FAMILIA,
       numero: 999999999,
       nome: 'Thais de Azevedo Soares'
@@ -38,7 +38,7 @@ const initialState: ContatoState = {
     },
     {
       id: 5,
-      email: 'danillohenrique@gmail.com',
+      email: 'danilloe@gmail.com',
       categoria: enums.Categoria.FAMILIA,
       numero: 4545645646,
       nome: 'Dannilo henrique de azevedo'
