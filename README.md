@@ -1,46 +1,176 @@
-# Getting Started with Create React App
+# 📇 Minhas Tarefas / Lista de Contatos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação de gerenciamento de contatos desenvolvida com **React + TypeScript**, permitindo **adicionar, editar, remover e filtrar contatos por categoria ou busca**.
 
-## Available Scripts
+O projeto foi desenvolvido com foco em praticar **arquitetura de aplicações React**, gerenciamento de estado global com **Redux Toolkit**, navegação com **React Router** e estilização com **Styled Components**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# 📸 Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Interface da aplicação
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![preview](./preview/home.png)
 
-### `npm test`
+## Adicionando contato
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![home](./preview/home.png)
+---
+![add contato](./preview/add_edit_contato.gif)
+---
+![remove](./preview//remove_contato.gif)
+---
+![filtro](./preview/filtro_e_busca.gif)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 🚀 Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-### `npm run eject`
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Styled Components](https://img.shields.io/badge/Styled--Components-db7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+# 📚 Conceitos praticados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Durante o desenvolvimento deste projeto foram praticados diversos conceitos importantes do ecossistema React:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Estruturação de aplicações com **React**
+- Tipagem estática utilizando **TypeScript**
+- Gerenciamento de estado global com **Redux Toolkit**
+- Navegação entre páginas com **React Router**
+- Componentização da interface
+- Separação entre **containers e componentes**
+- Filtragem dinâmica de dados
+- Manipulação de formulários controlados
+- Estilização utilizando **Styled Components**
+- Organização de pastas e arquitetura de projeto
+
+---
+
+# 🧠 Funcionalidades
+
+## ➕ Adicionar contato
+
+O usuário pode cadastrar novos contatos informando:
+
+- Nome
+- Email
+- Telefone
+- Categoria
+
+Categorias disponíveis:
+
+- Família
+- Amigos
+- Trabalho
+- Outros
+
+---
+
+## ✏️ Editar contato
+
+Os contatos podem ser editados diretamente na interface.
+
+É possível alterar:
+
+- Nome
+- Email
+- Telefone
+- Categoria
+
+---
+
+## ❌ Remover contato
+
+Cada contato pode ser removido da lista com um clique.
+
+---
+
+## 🔍 Busca de contatos
+
+A aplicação possui um campo de busca que permite encontrar contatos por:
+
+- Nome
+- Email
+- Número de telefone
+
+---
+
+## 🏷️ Filtro por categoria
+
+Os contatos podem ser filtrados por categoria:
+
+- Amigos
+- Família
+- Trabalho
+- Outros
+- Todos
+
+O sistema também mostra **quantos contatos existem em cada categoria**.
+
+---
+
+
+# ⚙️ Gerenciamento de estado
+
+O estado global da aplicação é gerenciado com **Redux Toolkit**, utilizando dois reducers principais:
+
+### contatos
+
+Responsável por:
+
+- armazenar contatos
+- adicionar novos contatos
+- editar contatos existentes
+- remover contatos
+
+---
+
+### filtro
+
+Responsável por:
+
+- termo de busca
+- filtro por categoria
+- controle dos resultados exibidos
+
+---
+
+# ▶️ Como executar o projeto
+
+- 1️⃣ Clonar o repositório
+  - git clone https://github.com/seu-usuario/minhas-tarefas.git
+- 2️⃣ Instalar dependências
+  - npm install
+- 3️⃣ Rodar o projeto
+  - npm start
+A aplicação abrirá em:http://localhost:3000
+---
+
+
+# 🎓 Objetivo educacional
+
+Este projeto foi desenvolvido com o objetivo de praticar **conceitos modernos do ecossistema React**, incluindo gerenciamento de estado com Redux, tipagem com TypeScript e organização de projetos front-end escaláveis.
+
+---
+
+# ⚠️ Observações
+
+Este projeto utiliza **dados locais**, sem integração com backend ou banco de dados.
+
+Os contatos são armazenados apenas na memória da aplicação.
+
+---
+
+# 👨‍💻 Autor
+
+**Vitor dos Reis Soares**
